@@ -57,6 +57,7 @@ Thanks a lot to the code repositories and authors below:
 * [https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408](https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408)
 * [https://stackoverflow.com/questions/65365797/docker-buildx-exec-user-process-caused-exec-format-error](https://stackoverflow.com/questions/65365797/docker-buildx-exec-user-process-caused-exec-format-error)
 * [https://github.com/pytorch/pytorch/blob/c371542efc31b1abfe6f388042aa3ab0cef935f2/cmake/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake](https://github.com/pytorch/pytorch/blob/c371542efc31b1abfe6f388042aa3ab0cef935f2/cmake/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake)
+* [https://github.com/XavierGeerinck/Jetson-Linux-PyTorch.git](original author - forked from)
 
 ## Extra
 
