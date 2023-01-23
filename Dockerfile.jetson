@@ -7,7 +7,7 @@ FROM ubuntu:18.04 as cuda-devel
 ARG V_CUDA_MAJOR=10
 ARG V_CUDA_MINOR=2
 ARG V_L4T_MAJOR=32
-ARG V_L4T_MINOR=6
+ARG V_L4T_MINOR=7
 
 ENV V_CUDA=${V_CUDA_MAJOR}.${V_CUDA_MINOR}
 ENV V_CUDA_DASH=${V_CUDA_MAJOR}-${V_CUDA_MINOR}
@@ -141,10 +141,10 @@ ARG USE_DISTRIBUTED=0
 # Build
 RUN cd /pytorch \
     && rm build/CMakeCache.txt || : \
-    && sed -i -e "/^if(DEFINED GLIBCXX_USE_CXX11_ABI)/i set(GLIBCXX_USE_CXX11_ABI 1)" CMakeLists.txt \
-    && pip install -r requirements.txt \
-    && python setup.py bdist_wheel \
-    && cd ..
+    && sed -i -e "/^if(DEFINED GLIBCXX_USE_CXX11_ABI)/i set(GLIBCXX_USE_CXX11_ABI 1)" CMakeLists.txt
+RUN cd /pytorch && pip install -r requirements.txt
+RUN pip install setuptools==59.5.0
+RUN cd /pytorch && python setup.py bdist_wheel && cd ..
 
 # ##################################################################################
 # Prepare Artifact
